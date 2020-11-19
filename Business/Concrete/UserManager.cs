@@ -18,27 +18,31 @@ namespace Business.Concrete
             _userDal = userDal;
         }
 
-        User IUserService.AddUser(User user)
+        public User AddUser(User user)
         {
             return _userDal.Add(user);
         }
 
-        void IUserService.DeleteUser(User user)
+        public void DeleteUser(User user)
         {
             _userDal.Delete(user);
         }
 
-        List<User> IUserService.GetAllUsers()
+        public List<User> GetAllUsers()
         {
             return _userDal.GetAll();
         }
 
-        User IUserService.GetUserByUserName(string userName)
+        public User GetUserByUserName(string userName)
         {
             return _userDal.Get(u => u.UserName.ToLower().Contains(userName.ToLower()));
         }
 
-        User IUserService.UpdateUser(User user)
+        public User GetUserByUserNameAndPassword(string userName, string password)
+        {
+            return _userDal.Get(u => u.UserName.Equals(userName) && u.UserPassword.Equals(password));
+        }
+        public User UpdateUser(User user)
         {
             return _userDal.Update(user);
         }

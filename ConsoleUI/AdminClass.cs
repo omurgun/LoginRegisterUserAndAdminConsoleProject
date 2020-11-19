@@ -20,6 +20,7 @@ namespace ConsoleUI
             Console.WriteLine("3- Delete User");
             Console.WriteLine("4- Get User");
             Console.WriteLine("5- GetAll User");
+            Console.WriteLine("6- Back To Main Menu");
             Console.WriteLine("0- Exit");
 
             Console.Write("please choose (0-5): ");
@@ -49,6 +50,10 @@ namespace ConsoleUI
                 case 5:
                     Console.Clear();
                     GetAllUsersUi();
+                    break;
+                case 6:
+                    Console.Clear();
+                    Program.MainMenu();
                     break;
                 default:
                     Console.WriteLine("Invalid choice!");

@@ -18,13 +18,13 @@ namespace ConsoleUI
         {
             while (true)
             {
-                Menu();
+                MainMenu();
             }
         }
 
-        private static void Menu()
+        public static void MainMenu()
         {
-            Console.WriteLine("\t\t\tWelcome");
+            Console.WriteLine("\t\t\tWelcome Main Menu");
             Console.WriteLine("1- Admin Panel");
             Console.WriteLine("2- User Panel");
             Console.WriteLine("0- Exit");
@@ -52,6 +52,5 @@ namespace ConsoleUI
 
         }
 
-        
     }
 }

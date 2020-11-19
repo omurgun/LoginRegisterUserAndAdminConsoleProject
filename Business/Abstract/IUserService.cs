@@ -11,6 +11,7 @@ namespace Business.Abstract
     {
         List<User> GetAllUsers();
         User GetUserByUserName(string userName);
+        User GetUserByUserNameAndPassword(string userName, string password);
         User AddUser(User user);
         User UpdateUser(User user);
         void DeleteUser(User user);
